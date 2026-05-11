@@ -55,9 +55,9 @@ const LoginPage = () => {
           <div className='space-y-5'>
             {/*Email field*/}
             <div className='space-y-2'>
-              <lable className='block text-xs font-semibold text-slate-700 uppercase tracking-wide'>
+              <label className='block text-xs font-semibold text-slate-700 uppercase tracking-wide'>
                 Email
-              </lable>
+              </label>
               <div className='relative group'>
                 <div className={`absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors duration-200 ${
                   focusField === 'email' ? 'text-emerald-500' : 'text-slate-400'
@@ -78,9 +78,9 @@ const LoginPage = () => {
 
             {/*Password field*/}
             <div className='space-y-2'>
-              <lable className='block text-xs font-semibold text-slate-700 uppercase tracking-wide'>
+              <label className='block text-xs font-semibold text-slate-700 uppercase tracking-wide'>
                 Password
-              </lable>
+              </label>
               <div className='relative group'>
                 <div className={`absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors duration-200 ${
                   focusField === 'password' ? 'text-emerald-500' : 'text-slate-400'
