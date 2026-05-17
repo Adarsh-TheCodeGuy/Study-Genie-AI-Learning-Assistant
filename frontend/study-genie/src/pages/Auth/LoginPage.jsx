@@ -22,7 +22,7 @@ const LoginPage = () => {
     setLoading(true);
     try {
       const { token, user } = await authService.login(email, password);
-      login(token, user);
+      login(user, token);
       toast.success('Logged in successfully');
       navigate('/dashboard');
     } catch (err) {
