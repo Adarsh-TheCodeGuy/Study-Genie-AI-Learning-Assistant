@@ -45,7 +45,7 @@ export const uploadDocument = async (req, res, next) => {
         });
 
         //Process the PDF in background
-        processPDF(document._id, req.file.path).catch(ree => {
+        processPDF(document._id, req.file.path).catch(err => {
             console.error('PDF processing error:', err);
         });
 
@@ -204,7 +204,7 @@ export const deleteDocument = async (req, res, next) => {
         await fs.unlink(document.filePath).catch(() => {});
 
         //Delete document from database
-        await document.remove();
+        await document.deleteOne();
 
         res.status(200).json({
             success: true,
