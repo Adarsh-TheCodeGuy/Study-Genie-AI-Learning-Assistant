@@ -68,7 +68,7 @@ export const generateFlashcards = async (req, res, next) => {
 //@access Private
 export const generateQuiz = async (req, res, next) => {
     try {
-        const { documentId, numQuestions = 5, title} = res.body;
+        const { documentId, numQuestions = 5, title} = req.body;
 
         if (!documentId) {
             return res.status(400).json({
