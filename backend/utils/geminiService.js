@@ -35,7 +35,7 @@ export const generateFlashcards = async (text, count = 10) => {
             contents: prompt,
         });
 
-        const generatedText = ResponseException.text;
+        const generatedText = response.text;
 
         //Parse the response
         const flashcards = [];
@@ -113,7 +113,7 @@ export const generateQuiz = async (text, numQuestions = 5) => {
 
                 if (trimmed.startsWith('Q:')) {
                     question = trimmed.substring(2).trim();
-                } else if (/^O\d:/.match(trimmed)) {
+                } else if (/^O\d:/.test(trimmed)) {
                     options.push(trimmed.substring(3).trim());
                 } else if (trimmed.startsWith('C:')) {
                     correctAnswer = trimmed.substring(2).trim();

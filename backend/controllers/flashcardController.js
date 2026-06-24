@@ -46,8 +46,8 @@ export const getAllFlashcardSets = async (req, res, next) => {
 //@access Private
 export const reviewFlashcard = async (req, res, next) => {
     try {
-        const flashcardSet = await Flashcard.finfOne({
-            'card._id': req.params.cardId,
+        const flashcardSet = await Flashcard.findOne({
+            'cards._id': req.params.cardId,
             userId: req.user._id
         });
 
@@ -90,7 +90,7 @@ export const reviewFlashcard = async (req, res, next) => {
 //@access Private
 export const toggleStarFlashcard = async (req, res, next) => {
     try {
-        const flashcardSet = await Flashcard.finfOne({
+        const flashcardSet = await Flashcard.findOne({
             'cards._id': req.params.cardId,
             userId: req.user._id
         });
