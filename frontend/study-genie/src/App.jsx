@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import DocumentListPage from "./pages/Documents/DocumentListPage";
 import DocumentDetailPage from "./pages/Documents/DocumentDetailsPage";
-import FlashcardsList from "./pages/Flashcards/FlashcardsList";
+import FlashcardsList from "./pages/Flashcards/FlashcardsListPage";
 import FlashcardsPage from "./pages/Flashcards/FlashcardsPage";
 import QuizTakePage from "./pages/Quizzes/QuizTakePage";
 import QuizResultsPage from "./pages/Quizzes/QuizResultPage";
