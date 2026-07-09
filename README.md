@@ -74,7 +74,7 @@ Example:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Study-Genie-AI-Learning-Assistant.git
+git clone https://github.com/Adarsh-TheCodeGuy/Study-Genie-AI-Learning-Assistant.git
 ```
 
 ### Install Frontend
