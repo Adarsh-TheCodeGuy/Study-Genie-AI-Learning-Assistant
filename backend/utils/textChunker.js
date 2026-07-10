@@ -44,15 +44,15 @@ export const chunkText = (text, chunkSize = 500, overlap = 50) => {
             }
 
             //Slip large paragraph into word-based chunks
-            for (let i = 0; i < paragraphWords.length; i += (chunkSize - overlap)) {
-                const chunkWords = paragraphWords.slice(i, i + chunkSize);
+            for (let i = 0; i < words.length; i += (chunkSize - overlap)) {
+                const chunkWords = words.slice(i, i + chunkSize);
                 chunks.push({
                     content: chunkWords.join(' '),
                     chunkIndex: chunkIndex++,
                     pageNumber: 0
                 });
 
-                if (i + chunkSize >= paragraphWords.length) break;
+                if (i + chunkSize >= words.length) break;
             }
             continue;
         }
